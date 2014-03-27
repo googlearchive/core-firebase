@@ -6,7 +6,7 @@ See the [component page](http://polymer.github.io/core-firebase) for more inform
 firebase-import
 ===============
 
-Import files are a new invention, so libraries like `firebase` do not yet provide them.
+Import files are a new invention, so libraries like [`firebase`](http://firebase.com) do not yet provide them.
 
 `firebase-import` is an intermediary that provides an import file for the `firebase` component. `firebase-import` depends on `firebase`.
 
