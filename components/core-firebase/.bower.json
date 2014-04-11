@@ -1,0 +1,19 @@
+{
+  "name": "core-firebase",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "firebase": "*"
+  },
+  "homepage": "https://github.com/Polymer/core-firebase",
+  "_release": "2a23e7935f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2a23e7935fcc80dbed24fd0ba699cbb2e6e5be8d"
+  },
+  "_source": "git://github.com/Polymer/core-firebase.git",
+  "_target": "master",
+  "_originalSource": "Polymer/core-firebase",
+  "_direct": true
+}
