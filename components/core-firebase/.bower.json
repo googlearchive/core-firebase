@@ -14,6 +14,5 @@
   },
   "_source": "git://github.com/Polymer/core-firebase.git",
   "_target": "master",
-  "_originalSource": "Polymer/core-firebase",
-  "_direct": true
+  "_originalSource": "Polymer/core-firebase"
 }
