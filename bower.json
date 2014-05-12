@@ -2,7 +2,8 @@
   "name": "core-firebase",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#master",
+    "polymer": "Polymer/polymer#0.2.4",
     "firebase": "*"
-  }
+  },
+  "version": "0.2.4"
 }
