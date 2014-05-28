@@ -28,7 +28,45 @@ Element wrapper for the FireBase Web API.
             this.fire('items-added');
           });
         }, this);
+        // C-F-K:
+        // written in the course of an assignment for an MA-level course on "Coding the Humanities"
+        // at the University of Amsterdam, Spring 2014 semester.
+        // I had to use Polymer and my project also needed Firebase,
+        // so the logical thing to do was attempt to add to core-firebase.
+        // I'd be quite interested to see how much of my code makes it into the final release of Polymer.
+        // (not much, I expect.)
+        dataRef.on('child_removed', function(snapshot){
+          list.splice(list.indexOf(snapshot.val()), 1);
+          job = this.job(job, function() {
+            this.fire('items-removed');
+          });
+        }, this);
 
+        dataRef.on('child_changed', function(snapshot, prevChildName){
+          var changedIndex = (prevChildName === null) ? 0 : list.indexOf(prevChildName) + 1;
+          list[changedIndex] = snapshot.val();
+          job = this.job(job, function() {
+            this.fire('items-changed');
+          });
+        }, this);
+
+        dataRef.on('value', function(snapshot){
+          var newList = [];
+          for (property in snapshot.val()){
+            newList.push(property);
+          }
+          list = newList;
+          job = this.job(job, function() {
+            this.fire('something-changed');
+          });
+          // are these 'really bad ways of doing this' because there's no reliable way
+          // to get the properties of an object such as snapshot.val() in any repeatable order?
+          // because that is what I suspect.
+          // would recommend not listening for something-changed until a better way is found 
+          // or, alternatively, not caring about order.
+        }, this);
+        // C-F-K:
+        // here ends the code I wrote
         this.list = list;
         this.dataRef = dataRef;
       },
