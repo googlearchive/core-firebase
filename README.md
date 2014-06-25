@@ -1,7 +1,7 @@
 core-firebase
 =============
 
-See the [component page](http://polymer.github.io/core-firebase) for more information.
+See the [component page](http://polymer-project.org/docs/elements/core-elements.html#core-firebase) for more information.
 
 firebase-import
 ===============
